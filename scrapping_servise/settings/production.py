@@ -37,7 +37,7 @@ SECRET_KEY = SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["serv-scrap.herokuapp.com"]
+ALLOWED_HOSTS = ["serv-scrap.herokuapp.com", ".herokuapp.com", ".researchthroughdesign.org"]
 
 
 # Application definition
