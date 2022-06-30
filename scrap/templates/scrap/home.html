@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title%} Home {% endblock  %}
+{% block content %}
+<figure class="text-center">
+    <blockquote class="blockquote my-3">
+        <h2>Сервис по сбору и рассылке вакансий</h2>
+    </blockquote>
+    <figcaption class="blockquote-footer my-3">
+        Для просмотра доступных вакансий, <cite title="Source Title">заполните форму </cite> по одному из полей (город, специальность)
+    </figcaption>
+</figure>
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        
+        <form method="GET" action="{% url 'list' %}">
+            <div class="mb-3">
+                {{form.as_p}}
+            </div>
+            <button type="submit" class="btn btn-primary">Найти</button>
+                
+        </form>
+    </div>
+</div>
+     
+{% endblock %}
+

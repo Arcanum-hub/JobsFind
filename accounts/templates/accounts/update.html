@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title%} Register {% endblock  %}
+{% block content %}
+
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <h4 class="my-2">Настройки</h4>
+        <form method="POST" action="">{% csrf_token %}
+            <div class="mb-3">
+                {{form.as_p}}
+            </div>
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+        </form>
+
+        <form method="POST" action="{% url 'accounts:delete' %}">{% csrf_token %}
+            <button type="submit" class="btn btn-danger my-3">Удалить аккаунт</button>
+        </form>
+    </div>
+</div>
+<div class="row my-5">
+    <div class="col-md-6 mx-auto">
+        <p class="my-2">Если вы не нашли то что вы ищите то вы можете заполнить форму ниже с Вашими пожеланиями, после того как необходимые данные будут добавлены, Вы получите письмо на указанный Вами email.</p>
+        <p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              Показать форму
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <form method="POST" action="{% url 'accounts:contact' %}">{% csrf_token %}
+                    <div class="mb-3">
+                        {{contact_form.as_p}}
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
+          </div>
+        
+    </div>
+</div>     
+{% endblock %}

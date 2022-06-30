@@ -1,0 +1,115 @@
+[
+{
+  "model": "scrap.city",
+  "pk": 1,
+  "fields": {
+    "name": "Тараз",
+    "slug": "taraz"
+  }
+},
+{
+  "model": "scrap.city",
+  "pk": 2,
+  "fields": {
+    "name": "Одесса",
+    "slug": "odessa"
+  }
+},
+{
+  "model": "scrap.city",
+  "pk": 3,
+  "fields": {
+    "name": "Алматы",
+    "slug": "almaty"
+  }
+},
+{
+  "model": "scrap.city",
+  "pk": 4,
+  "fields": {
+    "name": "Шымкент",
+    "slug": "shymkent"
+  }
+},
+{
+  "model": "scrap.language",
+  "pk": 1,
+  "fields": {
+    "name": "Python",
+    "slug": "python"
+  }
+},
+{
+  "model": "scrap.language",
+  "pk": 2,
+  "fields": {
+    "name": "Java",
+    "slug": "java"
+  }
+},
+{
+  "model": "scrap.vacancy",
+  "pk": 1,
+  "fields": {
+    "url": "https://hh.kz/vacancy/48103708?from=vacancy_search_list&hhtmFrom=vacancy_search_list&query=java",
+    "title": "Java-разработчик (Тинькофф Азия)",
+    "company": "Тинькофф",
+    "description": "Тинькофф собирает команду для международной экспансии\r\n\r\nТинькофф уже подал документы на открытие цифрового банка на Филиппинах. И это только начало. Тебя ждут амбициозные задачи, новые рынки, заряженная на успех команда профессионалов со всего мира, крутые возможности для карьерного роста и прокачки навыков английского в боевых условиях.\r\n\r\nЭто уникальная возможность поучаствовать в стартапе: без лишней бюрократии, тут важен только результат. Релокация не требуется, но возможна в будущем.\r\n\r\nХватит доделывать за кем-то, пора создавать самому.\r\n\r\nПрисоединяйся сегодня!",
+    "city": 4,
+    "language": 1,
+    "timestamp": "2022-05-05"
+  }
+},
+{
+  "model": "scrap.vacancy",
+  "pk": 2,
+  "fields": {
+    "url": "https://hh.kz/vacancy/54611354?from=vacancy_search_list&hhtmFrom=vacancy_search_list&query=Python",
+    "title": "Backend Developer (Python)",
+    "company": "ТОО FREEDOM MOBILE",
+    "description": "Чем предстоит заниматься:\r\n\r\nПереработка и развитие продукта fmobile.kz.\r\nВ дополнение к основному продукту есть бэклог по дополняющим продуктам (разработка с нуля).\r\nПредполагаются веб интерфейсы и мобильные приложения\r\nЧто мы ожидаем от кандидатов:\r\n\r\nРазработка бэкенда на Django\r\n\r\nРазработка REST сервисов\r\n\r\nВнедрение нового функционала и исправление существующих багов, разбор легаси кода\r\n\r\nОбязательные требования:\r\n\r\nОпыт разработки на Python от 1-3 лет\r\nОпыт работы с PostgreSQL, MySQL, MongoDB;\r\nЗнание Django, Flask\r\nОпыт работы с системами контроля версий Git\r\nУметь работать под Linux",
+    "city": 4,
+    "language": 1,
+    "timestamp": "2022-05-10"
+  }
+},
+{
+  "model": "scrap.vacancy",
+  "pk": 3,
+  "fields": {
+    "url": "https://hh.kz/vacancy/55237257?from=vacancy_search_list&hhtmFrom=vacancy_search_list&query=Python",
+    "title": "Python разработчик",
+    "company": "АО Банк Хоум Кредит, ДБ АО",
+    "description": "Мы — Группа Хоум Кредит, большая международная команда, где работает более 100 000 человек.\r\n\r\nХоум Кредит представлен по всему миру: в Чехии, Словакии, Китае, России, Казахстане, Филиппинах, Вьетнаме, Индонезии, Индии и США. В Казахстане банк Хоум Кредит работает более 10 лет, предоставляя доступные банковские продукты во всех регионах страны.\r\n\r\nМы команда, которая помогает осуществлять мечты миллионам казахстанцев! Сейчас нас уже больше 5000 человек и каждый из нас занимается любимым делом!",
+    "city": 3,
+    "language": 2,
+    "timestamp": "2022-05-10"
+  }
+},
+{
+  "model": "scrap.vacancy",
+  "pk": 4,
+  "fields": {
+    "url": "https://hh.kz/vacancy/55400185?from=vacancy_search_list&hhtmFrom=vacancy_search_list&query=java",
+    "title": "Fullstack java developer",
+    "company": "ООО Фаброс",
+    "description": "Требуется Fullstack java developer в команду разработки внутренней аналитической системы продуктовой компании.\r\n\r\nСистема обрабатывает десятки терабайт данных в сутки от миллионов устройств по всему миру.\r\n\r\nМы используем облачную инфраструктуру от AWS и Google Cloud Platform и Java стек технологий - Java 13, Spring MVC/ WebFlux, Hibernate, vue.js.\r\n\r\nНаш идеальный кандидат понимает весь жизненный цикл разработки ПО от проектирования до поддержки, способен взять на себя ответственность за реализацию функционала, начиная со стадии проектирования решения и заканчивая выведением его в продакшн..\r\n\r\nОпыт разработки высоконагруженных систем или систем обработки больших объемов данных, а также общие знания в статистике и машинном обучении, будут плюсом.",
+    "city": 3,
+    "language": 2,
+    "timestamp": "2022-05-10"
+  }
+},
+{
+  "model": "scrap.vacancy",
+  "pk": 5,
+  "fields": {
+    "url": "https://youtube.com/channel/UC0iLAvlk7WDmP3QXyo--e7w",
+    "title": "Test",
+    "company": "LPP Kazphosphate",
+    "description": "Тест вакансия",
+    "city": 1,
+    "language": 1,
+    "timestamp": "2022-05-10"
+  }
+}
+]
