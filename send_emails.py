@@ -10,11 +10,9 @@ os.environ["DJANGO_SETTINGS_MODULE"] = "scrapping_servise.settings"
 
 django.setup()
 from scrap.models import Vacancy, Error, Url
-from scrapping_servise.settings.local_settings import EMAIL_HOST, EMAIL_HOST_PASSWORD, EMAIL_HOST_USER
-try:
-    pass
-except ImportError:
-    from scrapping_servise.settings.production import EMAIL_HOST, EMAIL_HOST_PASSWORD, EMAIL_HOST_USER
+#from scrapping_servise.settings.local_settings import EMAIL_HOST, EMAIL_HOST_PASSWORD, EMAIL_HOST_USER
+
+from scrapping_servise.settings.production import EMAIL_HOST, EMAIL_HOST_PASSWORD, EMAIL_HOST_USER
 
 
 ADMIN_USER = EMAIL_HOST_USER
