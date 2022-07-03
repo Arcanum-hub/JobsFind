@@ -1,8 +1,10 @@
+
 from email.policy import default
 from sqlite3 import Timestamp
 from tabnanny import verbose
 from django.db import models
 from django.forms import JSONField
+
 
 from scrap.utils import from_cyrillic_to_eng
 
@@ -72,6 +74,6 @@ class Url(models.Model):
     city = models.ForeignKey('city', on_delete=models.CASCADE, verbose_name='Страна')
     language = models.ForeignKey('language', on_delete=models.CASCADE, verbose_name='Специальность')
     url_data = models.JSONField(default=default_urls)
-
+    
     class Meta:
         unique_together = ('city', 'language')
