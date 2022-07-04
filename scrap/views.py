@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from re import template
+from django.shortcuts import get_object_or_404, render
 from django.core.paginator import Paginator
 from scrap.forms import FindForm
 from .models import Vacancy
@@ -28,4 +29,10 @@ def list_view(request):
     return render(request, 'scrap/list.html', context)
 
 
-
+def v_detail(request, pk=None):
+    #object_ = Vacancy.objects.get(pk=pk)
+    object_ = get_object_or_404(Vacancy, pk=pk)
+    return render(request,'scrap/detail.html', {'object': object_})
+#class VDetail(DetailView):
+#    queryset = Vacancy.objects.all()
+#    template_name = 'scrap/detail.html'

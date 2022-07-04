@@ -1,5 +1,5 @@
 import asyncio
-import time 
+import time  # Time for complete func
 from asyncio import tasks
 import codecs
 import os, sys
