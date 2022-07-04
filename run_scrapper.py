@@ -1,4 +1,5 @@
 import asyncio
+import time 
 from asyncio import tasks
 import codecs
 import os, sys
@@ -62,7 +63,7 @@ async def main(value):
 settings = get_settings()
 url_list = get_urls(settings)
 
-import time  # Time for complete func
+
 start = time.time()
 
 
