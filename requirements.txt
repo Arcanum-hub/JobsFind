@@ -1,4 +1,4 @@
-python==3.7.0
+python==3.7
 asgiref==3.5.1
 beautifulsoup4==4.11.1
 certifi==2021.10.8
