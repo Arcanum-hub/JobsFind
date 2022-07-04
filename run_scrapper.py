@@ -80,13 +80,16 @@ tmp_tasks = [(func, data['url_data'][key], data['city'], data['language'])
 #        jobs += j
 #        errors += e
 if tmp_tasks:
+    print("tmp_tasks")
     tasks = asyncio.wait([loop.create_task(main(f)) for f in tmp_tasks])
     loop.run_until_complete(tasks)
     loop.close()
+    print("end")
 
 print(time.time()-start) # Time for complete func
 
 for job in jobs:
+    
     v = Vacancy(**job)
     try:
         v.save()

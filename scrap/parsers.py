@@ -8,7 +8,7 @@ import codecs
 
 from manage import main
 
-#__all__ = ('hh')
+
 __all__ = ('hh', 'jooble','indeed')
 
 headers = [
