@@ -54,6 +54,8 @@ def get_urls(_settings):
                 urls.append(tmp)
             #tmp['url_data'] = url_dct[pair]
             #urls.append(tmp)
+        else:
+            print("non pairs")
     return urls
 
 async def main(value):
