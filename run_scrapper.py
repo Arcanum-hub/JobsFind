@@ -59,10 +59,12 @@ def get_urls(_settings):
     return urls
 
 async def main(value):
+    
     func, url, city, language = value
     job, err = await loop.run_in_executor(None, func, url, city, language)
     errors.extend(err)
     jobs.extend(job)
+    
 
 settings = get_settings()
 url_list = get_urls(settings)
@@ -75,7 +77,7 @@ loop = asyncio.get_event_loop()
 tmp_tasks = [(func, data['url_data'][key], data['city'], data['language'])
             for data in url_list
             for func, key in parsers]
-
+print(tmp_tasks)
 
 #for data in url_list:
 #    for func, key in parsers:
