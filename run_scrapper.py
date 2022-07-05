@@ -18,7 +18,6 @@ from scrap.HTMLParser import *
 from scrap.models import Url, Vacancy, City, Language, Error
 from django.contrib.auth import get_user_model
 
-print ("strt script")
 User = get_user_model()
 
 parsers = (
@@ -44,11 +43,13 @@ def get_urls(_settings):
     for pair in _settings:
         print("strt")
         if pair in  url_dct:
+            print("pair")
             tmp = {}
             tmp['city'] = pair[0]
             tmp['language'] = pair[1]
             url_data = url_dct.get(pair)
             if url_data:
+                print("url_data")
                 tmp['url_data'] = url_dct.get(pair)
                 urls.append(tmp)
             #tmp['url_data'] = url_dct[pair]
@@ -56,10 +57,12 @@ def get_urls(_settings):
     return urls
 
 async def main(value):
+    print("async start")
     func, url, city, language = value
     job, err = await loop.run_in_executor(None, func, url, city, language)
     errors.extend(err)
     jobs.extend(job)
+    print("async finish")
 
 settings = get_settings()
 url_list = get_urls(settings)
