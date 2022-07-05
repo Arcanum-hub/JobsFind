@@ -6,13 +6,13 @@ from django.contrib.auth import get_user_model
 
 proj = os.path.dirname(os.path.abspath('manage.py'))
 sys.path.append(proj)
-os.environ["DJANGO_SETTINGS_MODULE"] = "scrapping_servise.settings"
+os.environ["DJANGO_SETTINGS_MODULE"] = "scraping_service.settings"
 
 django.setup()
 from scrap.models import Vacancy, Error, Url
-#from scrapping_servise.settings.local_settings import EMAIL_HOST, EMAIL_HOST_PASSWORD, EMAIL_HOST_USER
+#from scraping_service.settings.local_settings import EMAIL_HOST, EMAIL_HOST_PASSWORD, EMAIL_HOST_USER
 
-from scrapping_servise.settings.production import EMAIL_HOST, EMAIL_HOST_PASSWORD, EMAIL_HOST_USER
+from scraping_service.settings.production import EMAIL_HOST, EMAIL_HOST_PASSWORD, EMAIL_HOST_USER
 
 
 ADMIN_USER = EMAIL_HOST_USER
