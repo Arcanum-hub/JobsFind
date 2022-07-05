@@ -22,17 +22,17 @@ headers = [
 
 #hh.kz
 def hh(url, city = None, language= None):
-    print("hh is checked")
+    #print("hh is checked")
     jobs = []
     errors = []
     #domain = 'https://hh.kz/'
     if url:
-        print("hh is ready")
+        #print("hh is ready")
         resp = requests.get(url,headers=headers[randint(0, 2)])
 
         if resp.status_code == 200:
             
-            print("Ok200_1")
+            #print("Ok200_1")
             soup = BS(resp.content, 'html.parser')
             main_div = soup.find('div', id='a11y-main-content')
             div_lst = main_div.find_all('div', attrs={'class': 'vacancy-serp-item'})

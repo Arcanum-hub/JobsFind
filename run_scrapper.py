@@ -37,19 +37,18 @@ def get_urls(_settings):
     qs = Url.objects.all().values()
     url_dct = {(q['city_id'], q['language_id']): q['url_data'] for q in qs}
     
-    print(url_dct)
+    #print(_settings)
     urls = []
     
     for pair in _settings:
-        print("strt")
         if pair in  url_dct:
-            print("pair")
+            print(pair)
             tmp = {}
             tmp['city'] = pair[0]
             tmp['language'] = pair[1]
             url_data = url_dct.get(pair)
             if url_data:
-                print("url_data")
+                print(url_data)
                 tmp['url_data'] = url_dct.get(pair)
                 urls.append(tmp)
             #tmp['url_data'] = url_dct[pair]
@@ -59,12 +58,10 @@ def get_urls(_settings):
     return urls
 
 async def main(value):
-    print("async start")
     func, url, city, language = value
     job, err = await loop.run_in_executor(None, func, url, city, language)
     errors.extend(err)
     jobs.extend(job)
-    print("async finish")
 
 settings = get_settings()
 url_list = get_urls(settings)
@@ -86,11 +83,9 @@ tmp_tasks = [(func, data['url_data'][key], data['city'], data['language'])
 #        jobs += j
 #        errors += e
 if tmp_tasks:
-    print("tmp_tasks")
     tasks = asyncio.wait([loop.create_task(main(f)) for f in tmp_tasks])
     loop.run_until_complete(tasks)
     loop.close()
-    print("end")
 
 print(time.time()-start) # Time for complete func
 
