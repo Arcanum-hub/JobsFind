@@ -18,7 +18,7 @@ from scrap.parsers import *
 from scrap.models import Url, Vacancy, City, Language, Error
 from django.contrib.auth import get_user_model
 
-
+print ("strt script")
 User = get_user_model()
 
 parsers = (
@@ -42,6 +42,7 @@ def get_urls(_settings):
     urls = []
     
     for pair in _settings:
+        print("strt")
         if pair in  url_dct:
             tmp = {}
             tmp['city'] = pair[0]
