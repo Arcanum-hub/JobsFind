@@ -43,6 +43,8 @@ def get_urls(_settings):
     urls = []
     
     for pair in _settings:
+        print("print url_dct")
+        print(url_dct)
         if pair in  url_dct:
             print("print pair")
             print(pair)
