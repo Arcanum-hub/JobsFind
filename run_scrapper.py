@@ -37,7 +37,7 @@ def get_urls(_settings):
     qs = Url.objects.all().values()
     url_dct = {(q['city_id'], q['language_id']): q['url_data'] for q in qs}
     
-    #print(_settings)
+    print(_settings)
     urls = []
     
     for pair in _settings:
