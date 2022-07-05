@@ -40,7 +40,7 @@ def hh(url, city = None, language= None):
                 #print(main_div)
                 
                 for div in div_lst:
-                    print(url)
+                    #print(url)
                     title = div.find('h3')
                     href = title.a['href']
                     company = 'No name'

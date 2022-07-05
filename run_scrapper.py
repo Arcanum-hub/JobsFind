@@ -36,26 +36,27 @@ def get_settings():
 def get_urls(_settings):
     qs = Url.objects.all().values()
     url_dct = {(q['city_id'], q['language_id']): q['url_data'] for q in qs}
-    
+    print("print _settings")
     print(_settings)
+    print("print qs")
     print(qs)
     urls = []
     
     for pair in _settings:
         if pair in  url_dct:
+            print("print pair")
             print(pair)
             tmp = {}
             tmp['city'] = pair[0]
             tmp['language'] = pair[1]
             url_data = url_dct.get(pair)
             if url_data:
+                print("print url_data")
                 print(url_data)
                 tmp['url_data'] = url_dct.get(pair)
                 urls.append(tmp)
             #tmp['url_data'] = url_dct[pair]
             #urls.append(tmp)
-        else:
-            print("non pairs")
     return urls
 
 async def main(value):
@@ -77,6 +78,7 @@ loop = asyncio.get_event_loop()
 tmp_tasks = [(func, data['url_data'][key], data['city'], data['language'])
             for data in url_list
             for func, key in parsers]
+print("print tmp_tasks")            
 print(tmp_tasks)
 
 #for data in url_list:
@@ -106,9 +108,7 @@ if errors:
         err = qs.first()
         err.data.update({'errors': errors})
         err.save()
-        print ("fail1")
     else:
-        print ("fail2")
         er = Error(data=f'errors:{errors}').save()
 #h = codecs.open('work2.txt','w', 'utf-8')
 #h.write(str(jobs))
