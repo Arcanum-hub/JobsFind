@@ -14,12 +14,12 @@ def default_urls():
     return{'hh': "", 'jooble': "", 'indeed': ""}
 
 class City(models.Model):
-    name = models.CharField(max_length=50, verbose_name = 'Название населенного пункта', unique=True)
+    name = models.CharField(max_length=50, verbose_name = 'Страна', unique=True)
     slug = models.CharField(max_length=50, blank = True, unique=True)
 
     class Meta:
-        verbose_name = 'Название населенного пункта'
-        verbose_name_plural = 'Название населенных пунктов'
+        verbose_name = 'Страна'
+        verbose_name_plural = 'Страны'
 
     def __str__(self):
         return self.name
@@ -35,7 +35,7 @@ class Language(models.Model):
 
     class Meta:
         verbose_name = 'Специальность'
-        verbose_name_plural = 'Специальность'
+        verbose_name_plural = 'Специальности'
 
     def __str__(self):
         return self.name
