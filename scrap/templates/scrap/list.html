@@ -14,7 +14,7 @@
         {% for obj in object_list %}
         <div class="card my-3">
             <div class="card-body">
-                <h5 class="card-header"><a href="{{obj.url}}"> {{obj.title}} <a/></h5>
+                <h5 class="card-header" style="background-color: #e3f2fd;"><a style="text-decoration: none;" href="{{obj.url}}"> {{obj.title}} <a/></h5>
                 
                 <p class="card-text"> {{obj.description}}</p>
                 <div class = "col-md-6 my-3">
@@ -75,13 +75,13 @@
         </div>
     {% else %}
         <div class="row">
-            <div class="col-md-6 mx-auto">
-                <h4>К сожалению по вашему запросу ничего не найдено</h4>
+            <div class="col-md-6 mx-auto alert-light text-center">
+                <h5><dt>К сожалению по вашему запросу ничего не найдено </dt></h5>
             </div>
         </div>
     {% endif %}
     <div class="row">
-        <div class="col-md-6 mx-auto">
+        <div class="col-md-4 mx-auto my-5">
             <form method="GET" action="{% url 'list' %}">
                 <div class="mb-3">
                     {{form.as_p}}
