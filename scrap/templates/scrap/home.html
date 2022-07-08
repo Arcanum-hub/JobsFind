@@ -6,11 +6,18 @@ Welcome to job search service
 
 <figure class="text-center ">
     
-    <blockquote class="blockquote my-3">
-        <dt class="alert-light">Сервис по поиску и рассылке вакансий</dt>
+    <blockquote class="blockquote my-3 ">
+        <h3>
+            <dt class="alert-light">Сервис по поиску и рассылке вакансий</dt>
+        </h3>
     </blockquote>
-    <figcaption class="blockquote-footer my-3">
-        Для просмотра доступных вакансий, <cite title="Source Title">заполните форму </cite> по одному из полей (город, специальность)
+    <figcaption class="blockquote-footer my-5 ">
+        Каждый день мы анализируем сайты с вакансиями, согласно настроек наших подпсчиков.
+            Все подходящие вакансии, которые были опубликованы на этих сайтах за последние сутки,
+            записываются в базу данных и рассылаются подписчикам, согласно их предпочтений.
+            Вы можете просмартивать актуальные вакансии, просто выбрав необходимый город или специальность.
+            Или же, пройдя несложную <a href="{% url 'accounts:register' %}"> регистрацию</a>,
+            получать каждый день письмо со списком новых вакансий за последние сутки, согласно Ваших потребностей.
     </figcaption>
 </figure>
 <div class="row">
@@ -24,9 +31,14 @@ Welcome to job search service
         </form>
     </div>
 </div>
-<div class="col-md-12 mx-auto fixed-bottom">
-    <p><a href="https://www.linkedin.com/in/alexandrgrebyonkin/" class="text-muted text-decoration-none">Created by Grebyonkin Alexandr</a></p>
-</div>
+
+
+<nav class="navbar navbar-light fixed-bottom col-md-12 " style = "height: 35px !important; background-color: #e3f2fd;"  >
+    <p>
+        <a href="https://www.linkedin.com/in/alexandrgrebyonkin/" class="text-muted text-decoration-none small">© 2022 Alexandr Grebyonkin</a>
+    </p>
+
+</nav>
     
 {% endblock %}
 

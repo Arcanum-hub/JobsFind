@@ -18,8 +18,8 @@ class City(models.Model):
     slug = models.CharField(max_length=50, blank = True, unique=True)
 
     class Meta:
-        verbose_name = 'Страна'
-        verbose_name_plural = 'Страны'
+        verbose_name = 'Страна/город'
+        verbose_name_plural = 'Страны/города'
 
     def __str__(self):
         return self.name
@@ -50,7 +50,7 @@ class Vacancy(models.Model):
     title = models.CharField(max_length=250, verbose_name='Заголовок вакансии')
     company = models.CharField(max_length=250, verbose_name='Компания')
     description = models.TextField(verbose_name='Описание вакансии')
-    city = models.ForeignKey('city', on_delete=models.CASCADE, verbose_name='Страна')
+    city = models.ForeignKey('city', on_delete=models.CASCADE, verbose_name='Страна/город')
     language = models.ForeignKey('language', on_delete=models.CASCADE, verbose_name='Специальность')
     timestamp = models.DateField(auto_now_add=True)
 
@@ -71,7 +71,7 @@ class Error(models.Model):
     
 
 class Url(models.Model):
-    city = models.ForeignKey('city', on_delete=models.CASCADE, verbose_name='Страна')
+    city = models.ForeignKey('city', on_delete=models.CASCADE, verbose_name='Страна/город')
     language = models.ForeignKey('language', on_delete=models.CASCADE, verbose_name='Специальность')
     url_data = models.JSONField(default=default_urls)
     

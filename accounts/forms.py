@@ -48,7 +48,7 @@ class UserUpdateForm(forms.Form):
     city = forms.ModelChoiceField(
         queryset = City.objects.all(), to_field_name="slug", required=True,
         widget=forms.Select(attrs={'class':'form-control'}), 
-        label = 'Страна')
+        label = 'Страна/город')
     language = forms.ModelChoiceField(
         queryset = Language.objects.all(), to_field_name="slug", required=True, 
         widget=forms.Select(attrs={'class':'form-control'}), 
@@ -61,7 +61,7 @@ class UserUpdateForm(forms.Form):
 class ContactForm(forms.Form):
     city = forms.CharField(
         required=True, widget=forms.TextInput(attrs={'class':'form-control'}), 
-        label = 'Страна')
+        label = 'Страна/город')
     language = forms.CharField(
         required=True, widget=forms.TextInput(attrs={'class':'form-control'}), 
         label = 'Специальность')
